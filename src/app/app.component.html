@@ -1,0 +1,14 @@
+<div
+  style="height:100vh; padding-top:150px;"
+  class="container d-flex flex-column"
+>
+  <div class="d-flex flex-row">
+    <input #myinput class="m-10 flex-fill" type="text" />
+    <button class="btn btn-primary m-10" (click)="addFruit()">Ajouter</button>
+  </div>
+  <ul class="list-primary m-10">
+    <app-fruit *ngFor="let f of fruits" (deleteF)="deleteFruit($event)"
+      ><p #ref>{{f}}</p></app-fruit
+    >
+  </ul>
+</div>
