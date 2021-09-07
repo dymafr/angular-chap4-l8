@@ -14,8 +14,8 @@ import { FruitComponent } from "./fruit/fruit.component";
 })
 export class AppComponent {
   public fruits: string[] = ["fraise", "kiwi"];
-  @ViewChild("myinput") public el: ElementRef<HTMLInputElement>;
-  @ViewChildren(FruitComponent) public list: QueryList<FruitComponent>;
+  @ViewChild("myinput") public el!: ElementRef<HTMLInputElement>;
+  @ViewChildren(FruitComponent) public list!: QueryList<FruitComponent>;
 
   public addFruit() {
     console.info(this.list);
